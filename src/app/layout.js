@@ -1,11 +1,12 @@
-import Head from "next/head"
-import "./globals.css"
-import { CartProvider } from "@/context/CartContext" // Import CartProvider
+import Head from "next/head";
+import "./globals.css";
+import { CartProvider } from "@/Context/CartContext"; // Import CartProvider
 
 export const metadata = {
   title: "Clash e-commerce app",
-  description: "E-commerce store to a fast rising brand in the world of fashion",
-}
+  description:
+    "E-commerce store to a fast rising brand in the world of fashion",
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -18,5 +19,5 @@ export default function RootLayout({ children }) {
         </CartProvider>
       </body>
     </html>
-  )
+  );
 }

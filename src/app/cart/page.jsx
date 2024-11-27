@@ -65,23 +65,23 @@
 
 // export default Cart
 
-"use client"
+"use client";
 
-import { useCart } from "@/context/CartContext"
-import Navbar from "@/Components/Navbar/Navbar"
-import "./page.css"
-import React from "react"
-import Link from "next/link"
+import { useCart } from "@/Context/CartContext";
+import Navbar from "@/Components/Navbar/Navbar";
+import "./page.css";
+import React from "react";
+import Link from "next/link";
 
 function Cart() {
-  const { cartItems, removeFromCart } = useCart()
+  const { cartItems, removeFromCart } = useCart();
 
   const calculateSubtotal = (items) =>
-    items.reduce((acc, item) => acc + item.price * item.quantity, 0)
+    items.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
-  const deliveryFee = 20500
-  const subtotal = calculateSubtotal(cartItems)
-  const total = subtotal + deliveryFee
+  const deliveryFee = 20500;
+  const subtotal = calculateSubtotal(cartItems);
+  const total = subtotal + deliveryFee;
 
   return (
     <div className="cart__container">
@@ -179,7 +179,7 @@ function Cart() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Cart
+export default Cart;
